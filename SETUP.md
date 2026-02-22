@@ -19,13 +19,13 @@ headlessmc-bot/
 1. `cd ~/headlessmc-bot`
 2. `java -jar headlessmc-launcher-wrapper.jar` (use wrapper for plugin support)
 3. `login` - follow the Microsoft link to authenticate
-4. `download fabric:1.21.1` - download Minecraft + Fabric
+4. `download fabric:1.21.4` - download Minecraft + Fabric
 5. `specifics <version-id> hmc-specifics` - install CLI control mod
 6. `specifics <version-id> hmc-optimizations` - install performance mod
 7. `meteor` - download Meteor Client via plugin
 8. Install Baritone manually into .minecraft/mods/
 9. `mod add <version-id> fabric-api` - install Fabric API
-10. `launch fabric:1.21.1 -lwjgl` - launch headless
+10. `launch fabric:1.21.4 -lwjgl` - launch headless
 11. `connect 2b2t.org` - connect to 2b2t
 
 ## Notes
