@@ -29,13 +29,13 @@ RUN printf '%s\n' \
 # Copy hmc-meteor plugin
 COPY HeadlessMC/plugins/hmc-meteor-0.2.0.jar /headlessmc/HeadlessMC/plugins/hmc-meteor-0.2.0.jar
 
-# Download Meteor Client (for MC 1.21.4) into default .minecraft/mods
+# Download Meteor Client (for MC 1.21.1) into default .minecraft/mods
 RUN curl -Lo /root/.minecraft/mods/meteor-client.jar \
-    'https://meteorclient.com/api/download?version=1.21.4'
+    'https://maninmyvan.github.io/meteor-archive/files/meteor-client/meteor-client-0.5.8.jar'
 
-# Download Baritone (Meteor fork for MC 1.21.4) into default .minecraft/mods
+# Download Baritone (Meteor fork for MC 1.21.1) into default .minecraft/mods
 RUN curl -Lo /root/.minecraft/mods/baritone.jar \
-    'https://maven.meteordev.org/snapshots/meteordevelopment/baritone/1.21.4-SNAPSHOT/baritone-1.21.4-20250105.184728-1.jar'
+    'https://maven.meteordev.org/snapshots/meteordevelopment/baritone/1.21.1-SNAPSHOT/baritone-1.21.1-20240826.213754-1.jar'
 
 # Expose noVNC web port
 EXPOSE 6080
