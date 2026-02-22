@@ -1,0 +1,8 @@
+# HeadlessMC binaries (downloaded via download-deps.sh)
+hmc
+headlessmc-launcher-wrapper.jar
+
+# Runtime directories
+.minecraft/
+HeadlessMC/auth/
+HeadlessMC/run/

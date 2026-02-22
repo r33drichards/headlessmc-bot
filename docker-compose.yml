@@ -1,0 +1,23 @@
+services:
+  headlessmc:
+    build: .
+    container_name: headlessmc-bot
+    stdin_open: true
+    tty: true
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    ports:
+      - "6080:6080"
+    volumes:
+      # Persist game data (mods, worlds, etc.) between rebuilds
+      - hmc-run:/headlessmc/HeadlessMC/run
+      # Persist auth tokens
+      - hmc-auth:/headlessmc/HeadlessMC/auth
+    environment:
+      - JAVA_TOOL_OPTIONS=-Dsun.net.client.defaultConnectTimeout=30000 -Dsun.net.client.defaultReadTimeout=60000 -Djava.net.preferIPv4Stack=true
+    restart: unless-stopped
+
+volumes:
+  hmc-run:
+  hmc-auth:
